@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+
+<html lang="en-us" >
+<head>
+<title>pemesanan</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css">
+
+
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script type="text/javascript" src="/static/admin/js/calendar.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/DateTimeShortcuts.js"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="/static/admin/js/actions.js"></script>
+<script type="text/javascript" src="/static/admin/js/urlify.js"></script>
+<script type="text/javascript" src="/static/admin/js/prepopulate.js"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body class=" app-sewa model-sewa change-form"
+  data-admin-utc-offset="0">
+  <div class="breadcrumbs">
+        <a href="/">Home</a>
+        &rsaquo; <a href="/sewa/">Sewa</a>
+        </div>
+        
+
+    <!-- Content -->
+<div id="content" class="colM">
+        
+        
+        <div class="signup-form">
+                <h2 class="text-center">FORMULIR
+                        PEMESANAN SEWA BUS</h2>
+                <p class="text-center">Silahkan Masukan Data Anda</p>
+                <hr>
+                <div class="container">
+                        <form method="POST">
+
+        <!-- <form action="" method="post" id="sewa_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="VSFJ1TrVoR0UsDx0uhThm2k842qu9IObT4CEeIIcgKNDBxZn6uw22v5OK5dx2BgS"> -->
+        <div>
+        <fieldset class="module aligned ">
+              {{ form.as_p }}
+        
+        
+                <div class="form-row field-nama_pemesan">
+                
+                
+                        <div class="form-group">
+                                <label class="required" for="id_nama_pemesan">Nama pemesan:</label>
+
+                                    <input type="text" name="nama_pemesan" class="vTextField" maxlength="240" required id="id_nama_pemesan">
+                        </div>
+                
+                </div>
+        
+                <div class="form-row field-no_ktp">
+                
+                
+                        <div>
+                        
+                        
+                                <label class="required" for="id_no_ktp">No ktp:</label>
+
+                                    <input type="text" name="no_ktp" class="vTextField" maxlength="50" required id="id_no_ktp">
+
+                        
+                        
+                        </div>
+                
+                </div>
+        
+                <div class="form-row field-no_hp">
+                
+                
+                        <div>
+                        
+                        
+                                <label class="required" for="id_no_hp">No hp:</label>
+
+                                    <input type="text" name="no_hp" class="vTextField" maxlength="50" required id="id_no_hp">
+
+                        
+                        
+                        </div>
+                
+                </div>
+        
+                <div class="form-row field-email">
+                
+                
+                        <div>
+                        
+                        
+                                <label class="required" for="id_email">Email:</label>
+
+                                    <input type="email" name="email" class="vTextField" maxlength="254" required id="id_email">
+
+                        
+                        
+                        </div>
+                
+                </div>
+        
+                <div class="form-row field-tanggal_mulai">
+                
+                
+                        <div>
+                        
+                        
+                                <label class="required" for="id_tanggal_mulai">Tanggal mulai:</label>
+
+                                    <input type="text" name="tanggal_mulai" class="vDateField" size="10" required id="id_tanggal_mulai">
+
+                        
+                        
+                        </div>
+                
+                </div>
+        
+                <div class="form-row field-tanggal_selesai">
+                
+                
+                        <div>
+                        
+                        
+                                <label class="required" for="id_tanggal_selesai">Tanggal selesai:</label>
+
+                                    <input type="text" name="tanggal_selesai" class="vDateField" size="10" required id="id_tanggal_selesai">
+
+                        
+                        
+                        </div>
+                
+                </div>
+                <div class="form-row field-tujuan">
+                
+                
+                        <div>
+                                <label class="required" for="id_nama_pemesan">Tujuan Perjalanan:</label>
+
+                                    <input type="text" name="tujuan" class="vTextField" maxlength="240" required id="id_tujuan">
+                        </div>
+                
+                </div>
+                <div class="form-row field-waktu">
+                
+                
+                        <div>
+                                <label class="required" for="id_nama_pemesan">Waktu Jemput:</label>
+
+                                    <input type="text" name="waktu" class="vTextField" maxlength="240" required id="id_waktu">
+                        </div>
+                
+                </div>
+                <div class="form-row field-sewa">
+                
+                
+                        <div>
+                                <label class="required" for="id_nama_pemesan">Waktu Sewa:</label>
+
+                                    <input type="text" name="sewa" class="vTextField" maxlength="240" required id="id_sewa">
+                        </div>
+                
+                </div>
+        
+                <div class="form-row field-titik_penjemputan">
+                
+                
+                <div>
+                        <label class="required" for="id_titik_penjemputan">Titik penjemputan:</label>
+                        <textarea name="titik_penjemputan" cols="40" rows="10" class="vLargeTextField" maxlength="254" required id="id_titik_penjemputan"> </textarea>
+
+                </div>
+                
+                </div>
+        
+        </fieldset>
+        <div class="submit-row">
+
+        <input type="submit" value="Selesai" class="default" name="_selesai">
+
+
+        </div>
+        {% csrf_token %}
+
+
+        <script type="text/javascript"
+                id="django-admin-form-add-constants"
+                src="/static/admin/js/change_form.js"
+                    data-model-name="sewa"
+                >
+        </script>
+
+
+
+
+        <script type="text/javascript"
+                id="django-admin-prepopulated-fields-constants"
+                src="/static/admin/js/prepopulate_init.js"
+                
+                
+                
+                
+                
+        data-prepopulated-fields="[]">
+</script>
+</div>
+</form></div>
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+</body>
+</html>
